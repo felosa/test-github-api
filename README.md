@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Instructions to run the project:
 
-## Available Scripts
+Clone the repository from gitHub.
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm install`
+
+To run the project in local: 
+
+### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+Observations: 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I decided to use the github api because I wanted to show my logic in a simplistic way. I thought about using the youtube api or spotify api, which would have perhaps made the overall result more visually appealing, but I didn't know if I would have time to do it properly so that is why I decided on using github.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I used React Hooks because I feel it creates a cleaner code, more so than the older version using classes and state. I didn't implement Redux because I think is not neccesary to add that level of complexity in this specific task.
 
-### `yarn eject`
+If I could start the project again, I would start implementing Material-UI at the same time as I start the logic. This is because I lost a lot of time changing the HTML after finishing the logic which meant I wasn't as efficient with my time as I needed to be in developing the project as a whole. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+If I were to have more time, I would like to properly implement all of the CSS on my own, using css files, in order to have a cleaner code. I also would have introduced a web responsive design.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -17,8 +17,8 @@ export const Users = ({ user, users, setOneUser, changeSearch, search }) => {
     return (
       <div>
         {user !== "" ? (
-          <div>
-            <Typography>{user.login} Followers:</Typography>
+          <div style={{ marginTop: "60px" }}>
+            <Typography>{user.login}'s' Followers:</Typography>
           </div>
         ) : (
           <></>
@@ -32,6 +32,7 @@ export const Users = ({ user, users, setOneUser, changeSearch, search }) => {
         >
           <div
             style={{
+              marginTop: "50px",
               width: "60%",
               display: "flex",
               justifyContent: "center",
@@ -41,13 +42,14 @@ export const Users = ({ user, users, setOneUser, changeSearch, search }) => {
             {users.map((user, index) => {
               return (
                 <div
+                  key={index}
                   style={{
                     padding: "15px",
                     maxWidth: "200px",
                     maxHeight: "400px"
                   }}
                 >
-                  <Card key={index}>
+                  <Card>
                     <CardActionArea>
                       <img
                         style={{ width: "200px" }}

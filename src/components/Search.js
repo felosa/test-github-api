@@ -26,9 +26,14 @@ const Search = ({ changeSearch }) => {
 
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div
-          style={{ display: "flex", flexDirection: "column", width: "350px" }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center"
+          }}
         >
           <TextField
+            style={{ width: "350px" }}
             label="GitHub Username"
             variant="outlined"
             type="text"
@@ -37,15 +42,17 @@ const Search = ({ changeSearch }) => {
             onChange={e => handleChange(e)}
           />
 
-          <Link to="/list" style={{ textDecoration: "none" }}>
-            <Button
-              variant="contained"
-              style={{ marginTop: "20px" }}
-              onClick={e => handleForSubmit(e)}
-            >
-              Search
-            </Button>
-          </Link>
+          <div style={{ width: "350px" }}>
+            <Link to="/list">
+              <Button
+                variant="contained"
+                style={{ marginTop: "20px" }}
+                onClick={e => handleForSubmit(e)}
+              >
+                Search
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

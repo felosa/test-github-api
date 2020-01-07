@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Button, Card, Typography } from "@material-ui/core";
+import { Button, Card, Typography, CardActionArea } from "@material-ui/core";
 
 export const OneUser = ({ user, setFollowers }) => {
   const callFollowers = () => {
@@ -14,25 +14,66 @@ export const OneUser = ({ user, setFollowers }) => {
       .catch();
   };
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <Card style={{ marginTop: "50px", display: "flex", width: "600px" }}>
-        <div>
-          <img style={{ height: "300px" }} src={user.avatar_url} alt=""></img>
-        </div>
-        <div style={{ justifyContent: "center" }}>
-          <p>Nickname: {user.login}</p>
-          <p>Type: {user.type}</p>
-          <a href={user.html_url} target="_blank" alt="">
-            Open profile in GitHub
-          </a>
-          <br></br>
-          <Link to="/list">
-            <Button onClick={() => callFollowers()}>
-              <p>Followers</p>
-            </Button>
-          </Link>
-        </div>
-      </Card>
+    <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center"
+        }}
+      >
+        <Card
+          style={{
+            marginTop: "50px",
+            display: "flex",
+            width: "600px",
+            backgroundColor: "gray"
+          }}
+        >
+          <div>
+            <CardActionArea>
+              <img
+                style={{ borderRadius: "20px", margin: "20px", width: "200px" }}
+                src={user.avatar_url}
+                alt="User Avatar"
+              />
+            </CardActionArea>
+          </div>
+          <div
+            style={{
+              borderRadius: "20px",
+              backgroundColor: "white",
+              margin: "20px",
+              width: "300px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center"
+            }}
+          >
+            <p>
+              <b>Nickname:</b> {user.login}
+            </p>
+            <p>
+              <b>Type:</b> {user.type}
+            </p>
+
+            <br></br>
+            <Link to="/list">
+              <Button
+                style={{ width: "100px", heigh: "10px" }}
+                variant="contained"
+                onClick={() => callFollowers()}
+              >
+                <p>Followers</p>
+              </Button>
+            </Link>
+          </div>
+        </Card>
+      </div>
+      <div style={{ marginTop: "20px" }}>
+        <a href={user.html_url} target="_blank" alt="">
+          <Button> Open profile in GitHub </Button>
+        </a>
+      </div>
     </div>
   );
 };
