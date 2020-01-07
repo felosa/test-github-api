@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import React, { useState } from "react";
+import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
 import { Users } from "./components/Users";
@@ -11,8 +11,6 @@ const App = () => {
   const [users, setUsers] = useState([]);
   const [oneUser, setOneUser] = useState("");
   const [search, setSearch] = useState("");
-
-  // useEffect(() => {}, []);
 
   const changeSearch = actualSearch => {
     axios

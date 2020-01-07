@@ -1,14 +1,13 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Button, Card, Typography, CardActionArea } from "@material-ui/core";
+import { Button, Card, CardActionArea } from "@material-ui/core";
 
 export const OneUser = ({ user, setFollowers }) => {
   const callFollowers = () => {
     axios
       .get(`https://api.github.com/users/${user.login}/followers`)
       .then(res => {
-        console.log(res.data);
         setFollowers(res.data);
       })
       .catch();
