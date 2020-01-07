@@ -28,3 +28,6 @@ If I could start the project again, I would start implementing Material-UI at th
 
 If I were to have more time, I would like to properly implement all of the CSS on my own, using css files, in order to have a cleaner code. I also would have introduced a web responsive design.
 
+I've also attached the link of my project which is deployed in Netlify:
+
+https://unruffled-wilson-e0a856.netlify.com/
