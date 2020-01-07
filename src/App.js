@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import axios from "axios";
+import "./App.css";
+import { Users } from "./components/Users";
+import Search from "./components/Search";
 
-function App() {
+const App = () => {
+  const [searchUsers, setSearchUsers] = useState("");
+
+  // useEffect(() => {}, []);
+
+  const changeSearch = actualSearch => {
+    setSearchUsers(actualSearch);
+  };
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        
+      </header> */}
+      <Search changeSearch={value => changeSearch(value)}></Search>
+      {/* <Switch>
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <Users
+              {...props}
+            />
+          )}
+        />
+      
+      </Switch> */}
     </div>
   );
-}
+};
 
 export default App;
